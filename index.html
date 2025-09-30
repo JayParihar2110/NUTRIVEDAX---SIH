@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyurNutri - Ancient Wisdom, Modern Science</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface:wght@400&family=General+Sans:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <div id="homepage" class="homepage">
+        <header class="header">
+            <div class="container">
+                <nav class="navbar">
+                    <div class="nav-brand">
+                        <h1 class="logo">AyurNutri</h1>
+                    </div>
+                    <ul class="nav-menu">
+                        <li><a href="#homepage" class="nav-link">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#features" class="nav-link">Features</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                        <li><a href="#" class="nav-link login-btn" onclick="showLoginOptions()">Login / Sign Up</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-logo">AyurNutri</h1>
+                    <h2 class="hero-tagline">Ancient Wisdom, Modern Science</h2>
+                    <p class="hero-subtitle">Transform your health with personalized Ayurvedic nutrition guidance, backed by cutting-edge technology and 5000 years of traditional wisdom.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" onclick="showAuth('patient')">Start Your Journey</button>
+                        <a href="#features" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="roles-section" style="background-color: var(--white);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About AyurNutri</h2>
+                    <p class="section-subtitle">We bridge 5,000 years of Ayurvedic wisdom with modern science to offer personalized wellness solutions. Our platform empowers both patients and practitioners on their journey to holistic health.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="roles-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Choose Your Path to Wellness</h2>
+                    <p class="section-subtitle">Discover how AyurNutri can transform your health journey</p>
+                </div>
+                
+                <div class="roles-grid">
+                    <div class="role-card patient-card">
+                        <div class="card-icon">🧘‍♂️</div>
+                        <h3 class="card-title">For Patients</h3>
+                        <p class="card-description">Discover your unique Dosha constitution and transform your health with personalized Ayurvedic guidance</p>
+                        <ul class="feature-list">
+                            <li>Comprehensive Dosha Assessment</li>
+                            <li>Personalized Diet Plans</li>
+                            <li>Progress Tracking & Analytics</li>
+                            <li>Custom Yoga Routines</li>
+                            <li>Food Compatibility Analysis</li>
+                            <li>Wellness Journey Tracking</li>
+                        </ul>
+                        <button class="btn btn-primary btn-full" onclick="showAuth('patient')">Start Your Journey</button>
+                    </div>
+
+                    <div class="role-card dietitian-card">
+                        <div class="card-icon">👩‍⚕️</div>
+                        <h3 class="card-title">For Dietitians</h3>
+                        <p class="card-description">Comprehensive practice management tools that save time while providing authentic Ayurvedic care</p>
+                        <ul class="feature-list">
+                            <li>Patient Management System</li>
+                            <li>AI-Powered Diet Planning</li>
+                            <li>Analytics Dashboard</li>
+                            <li>Time-saving Automation</li>
+                            <li>Professional Reporting</li>
+                            <li>Practice Growth Tools</li>
+                        </ul>
+                        <button class="btn btn-primary btn-full" onclick="showAuth('dietitian')">Professional Portal</button>
+                    </div>
+
+                    <div class="role-card admin-card">
+                        <div class="card-icon">⚙️</div>
+                        <h3 class="card-title">For Admins</h3>
+                        <p class="card-description">System oversight and management tools for maintaining platform excellence and user satisfaction</p>
+                        <ul class="feature-list">
+                            <li>User Management & Verification</li>
+                            <li>System Analytics & Reporting</li>
+                            <li>Content Management System</li>
+                            <li>Security Oversight</li>
+                            <li>Database Administration</li>
+                            <li>Platform Monitoring</li>
+                        </ul>
+                        <button class="btn btn-primary btn-full" onclick="showAuth('admin')">Admin Access</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="roles-section" style="background-color: var(--white);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Have questions? Reach out to us at support@ayurnutri.com or follow us on social media.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <h3 class="footer-logo">AyurNutri</h3>
+                        <p>Bridging ancient wisdom with modern science</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Platform</h4>
+                            <ul>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Contact</h4>
+                            <ul>
+                                <li>support@ayurnutri.com</li>
+                                <li>+91 98765 43210</li>
+                                <li>Mumbai, India</li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Follow Us</h4>
+                            <div class="social-links">
+                                <a href="#" target="_blank">📘</a>
+                                <a href="#" target="_blank">📷</a>
+                                <a href="#" target="_blank">🐦</a>
+                                <a href="#" target="_blank">💼</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 AyurNutri. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="auth-modal" class="modal hidden">
+        <div class="modal-overlay" onclick="closeAuth()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="auth-title" class="modal-title">Login</h2>
+                <button class="modal-close" onclick="closeAuth()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="auth-form">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" id="auth-email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" id="auth-password" class="form-control" required>
+                    </div>
+                    <div id="patient-extra-fields" class="hidden">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" id="auth-name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Age</label>
+                            <input type="number" id="auth-age" class="form-control">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span id="auth-btn-text">Login</span>
+                    </button>
+                </form>
+                <div id="google-login" class="hidden auth-divider">
+                    <button class="btn btn-google" onclick="googleLogin()">
+                        🔗 Continue with Google
+                    </button>
+                </div>
+                <p id="auth-switch" class="auth-switch">
+                    <a href="#" onclick="toggleAuthMode()">Don't have an account? Sign up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="patient-dashboard" class="dashboard hidden">
+        <nav class="dashboard-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <button class="back-btn" onclick="goBack()">← Back</button>
+                    <h1 class="dashboard-logo">AyurNutri</h1>
+                    <div class="nav-actions">
+                        <span id="patient-name" class="user-name"></span>
+                        <span id="patient-plan" class="plan-badge">Free Plan</span>
+                        <button class="btn btn-sm btn-outline" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="dashboard-content">
+            <div class="container">
+                <div class="dashboard-grid">
+                    <div class="dash-card dosha-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Your Dosha Constitution</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="dosha-wheel">
+                                <canvas id="dosha-chart" style="position: relative; height: 200px;"></canvas>
+                            </div>
+                            <button class="btn btn-outline btn-full" onclick="retakeDosha()">Retake Assessment</button>
+                        </div>
+                    </div>
+
+                    <div class="dash-card diet-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Today's Diet Plan</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="diet-preview">
+                                <div class="meal-item">
+                                    <h4>Breakfast</h4>
+                                    <p>Oatmeal with almonds and honey</p>
+                                </div>
+                                <div class="meal-item">
+                                    <h4>Lunch</h4>
+                                    <p>Basmati rice with dal and vegetables</p>
+                                </div>
+                                <div class="meal-item">
+                                    <h4>Dinner</h4>
+                                    <p>Vegetable khichdi with ghee</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-full" onclick="viewFullDietPlan()">View Full Plan</button>
+                        </div>
+                    </div>
+
+                    <div class="dash-card premium-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Premium Features</h3>
+                            <span class="premium-lock">🔒 Locked</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="premium-features">
+                                <div class="premium-feature" onclick="handlePremiumFeature('AR Food Scanner')">
+                                    <span class="feature-icon">📱</span>
+                                    <span class="feature-name">AR Food Scanner</span>
+                                </div>
+                                <div class="premium-feature" onclick="handlePremiumFeature('IoT Integration')">
+                                    <span class="feature-icon">⌚</span>
+                                    <span class="feature-name">IoT Wearable Integration</span>
+                                </div>
+                                <div class="premium-feature" onclick="handlePremiumFeature('Advanced Analytics')">
+                                    <span class="feature-icon">📊</span>
+                                    <span class="feature-name">Advanced Analytics</span>
+                                </div>
+                                <div class="premium-feature" onclick="handlePremiumFeature('Priority Support')">
+                                    <span class="feature-icon">💬</span>
+                                    <span class="feature-name">Priority Support</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-full" onclick="upgradeToPremium()">Upgrade to Premium</button>
+                        </div>
+                    </div>
+
+                    <div class="dash-card yoga-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Yoga & Lifestyle</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="yoga-routine">
+                                <h4>Today's Routine</h4>
+                                <p>Grounding Morning Flow - 30 mins</p>
+                                <div class="yoga-actions">
+                                    <button class="btn btn-outline btn-sm" onclick="startYoga()">Start Session</button>
+                                    <button class="btn btn-outline btn-sm" onclick="viewSchedule()">View Schedule</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-card nutrition-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Nutrition Analysis</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="nutrition-chart">
+                                <canvas id="nutrition-chart" style="position: relative; height: 150px;"></canvas>
+                            </div>
+                            <button class="btn btn-outline btn-full" onclick="viewNutritionDetails()">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="dash-card progress-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Progress Tracking</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="progress-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Weight Goal</span>
+                                    <span class="stat-value">70kg → 65kg</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 40%"></div>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Energy Levels</span>
+                                    <span class="stat-value improving">Improving ↗️</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline btn-full" onclick="logProgress()">Update Progress</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dosha-assessment" class="assessment-page hidden">
+        <div class="container">
+            <button class="back-btn" onclick="goBack()">← Back</button>
+            <div class="assessment-container">
+                <div class="assessment-header">
+                    <h2 class="assessment-title">Ayurvedic Dosha Assessment</h2>
+                    <p class="assessment-subtitle">Answer these questions to discover your constitutional type</p>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div id="assessment-progress" class="progress-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="assessment-body">
+                    <div id="question-container">
+                        </div>
+                    <div class="assessment-actions">
+                        <button id="prev-question" class="btn btn-outline" onclick="previousQuestion()" disabled>Previous</button>
+                        <button id="next-question" class="btn btn-primary" onclick="nextQuestion()">Next</button>
+                        <button id="submit-assessment" class="btn btn-primary hidden" onclick="submitAssessment()">View Results</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dietitian-dashboard" class="dashboard hidden">
+        <nav class="dashboard-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <button class="back-btn" onclick="goBack()">← Back</button>
+                    <h1 class="dashboard-logo">AyurNutri - Professional Portal</h1>
+                    <div class="nav-actions">
+                        <span id="dietitian-name" class="user-name"></span>
+                        <button class="btn btn-sm btn-outline" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="dashboard-content">
+            <div class="container">
+                <div class="professional-layout">
+                    <div class="main-content">
+                        <div class="dash-card patients-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Patient Management</h3>
+                                <button class="btn btn-primary btn-sm" onclick="addPatient()">Add Patient</button>
+                            </div>
+                            <div class="card-body">
+                                <div class="search-box">
+                                    <input type="text" class="form-control" placeholder="Search patients..." id="patient-search">
+                                </div>
+                                <div id="patients-list" class="patients-list">
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-content">
+                        <div class="dash-card quick-actions-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Quick Actions</h3>
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-outline btn-full" onclick="createDietPlan()">Create Diet Plan</button>
+                                <button class="btn btn-outline btn-full" onclick="scheduleConsultation()">Schedule Consultation</button>
+                                <button class="btn btn-outline btn-full" onclick="generateReport()">Generate Report</button>
+                            </div>
+                        </div>
+
+                        <div class="dash-card overview-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Today's Overview</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="overview-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">Consultations</span>
+                                        <span class="stat-value">8</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">New Patients</span>
+                                        <span class="stat-value">3</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Diet Plans Created</span>
+                                        <span class="stat-value">5</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="admin-dashboard" class="dashboard hidden">
+        <nav class="dashboard-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <button class="back-btn" onclick="goBack()">← Back</button>
+                    <h1 class="dashboard-logo">AyurNutri - Admin Portal</h1>
+                    <div class="nav-actions">
+                        <span class="user-name">Admin</span>
+                        <button class="btn btn-sm btn-outline" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="dashboard-content">
+            <div class="container">
+                <div class="admin-layout">
+                    <div class="dash-card verification-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Dietitian Verification</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="pending-verifications" class="verification-list">
+                                <div class="verification-item">
+                                    <div class="verification-info">
+                                        <h4>Dr. Priya Sharma</h4>
+                                        <p>Ayurvedic Practitioner - 10 years exp</p>
+                                    </div>
+                                    <div class="verification-actions">
+                                        <button class="btn btn-primary btn-sm" onclick="verifyDietitian('1')">Approve</button>
+                                        <button class="btn btn-outline btn-sm" onclick="rejectDietitian('1')">Reject</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-card analytics-card">
+                        <div class="card-header">
+                            <h3 class="card-title">System Analytics</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="analytics-chart">
+                                <canvas id="analytics-chart" style="position: relative; height: 200px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-card users-card">
+                        <div class="card-header">
+                            <h3 class="card-title">User Management</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="user-stats">
+                                <div class="stat-box">
+                                    <div class="stat-number">1,247</div>
+                                    <div class="stat-label">Total Patients</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-number">89</div>
+                                    <div class="stat-label">Active Dietitians</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-number">356</div>
+                                    <div class="stat-label">Premium Users</div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline btn-full" onclick="manageUsers()">Manage All Users</button>
+                        </div>
+                    </div>
+
+                    <div class="dash-card payment-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Payment Monitoring</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="payment-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Monthly Revenue</span>
+                                    <span class="stat-value success">₹2,45,000</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">New Subscriptions</span>
+                                    <span class="stat-value">127</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Churn Rate</span>
+                                    <span class="stat-value warning">2.3%</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline btn-full" onclick="viewPaymentDetails()">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="upgrade-modal" class="modal hidden">
+        <div class="modal-overlay" onclick="closeUpgradeModal()"></div>
+        <div class="modal-content upgrade-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Upgrade to Premium</h2>
+                <button class="modal-close" onclick="closeUpgradeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="pricing-info">
+                    <div class="price">₹999/month</div>
+                    <p class="price-subtitle">Unlock all premium features</p>
+                </div>
+                
+                <div class="premium-benefits">
+                    <div class="benefit-item">
+                        <span class="benefit-check">✓</span>
+                        <span>AR Food Scanner with instant nutrition analysis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-check">✓</span>
+                        <span>IoT Wearable integration for health tracking</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-check">✓</span>
+                        <span>Advanced personalized insights & recommendations</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-check">✓</span>
+                        <span>Priority dietitian consultations</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-check">✓</span>
+                        <span>Detailed progress analytics with charts</span>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary btn-full upgrade-btn" onclick="processPremiumPayment()">
+                    Upgrade Now with Razorpay
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ar-scanner" class="scanner-page hidden">
+        <div class="container">
+            <button class="back-btn" onclick="goBack()">← Back</button>
+            <div class="scanner-container">
+                <div class="scanner-header">
+                    <h2 class="scanner-title">AR Food Scanner</h2>
+                    <p class="scanner-subtitle">Point your camera at food to get instant nutrition & Dosha analysis</p>
+                </div>
+                <div class="scanner-body">
+                    <div class="camera-preview">
+                        <div class="camera-placeholder">
+                            <div class="camera-icon">📸</div>
+                            <p>Camera preview would appear here</p>
+                            <button class="btn btn-primary" onclick="scanFood()">Scan Food</button>
+                        </div>
+                    </div>
+                    <div id="scan-results" class="scan-results hidden">
+                        <h3 class="results-title">Scan Results: Apple</h3>
+                        <div class="results-grid">
+                            <div class="results-section">
+                                <h4>Nutrition (per 100g)</h4>
+                                <div class="nutrition-data">
+                                    <div class="data-item">
+                                        <span>Calories</span>
+                                        <span>52</span>
+                                    </div>
+                                    <div class="data-item">
+                                        <span>Carbs</span>
+                                        <span>14g</span>
+                                    </div>
+                                    <div class="data-item">
+                                        <span>Fiber</span>
+                                        <span>2.4g</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="results-section">
+                                <h4>Ayurvedic Properties</h4>
+                                <div class="ayurvedic-data">
+                                    <div class="data-item">
+                                        <span>Rasa</span>
+                                        <span>Sweet</span>
+                                    </div>
+                                    <div class="data-item">
+                                        <span>Virya</span>
+                                        <span>Cold</span>
+                                    </div>
+                                    <div class="data-item">
+                                        <span>Good for</span>
+                                        <span>Pitta</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline" onclick="closeArScanner()">Close Scanner</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Processing...</p>
+        </div>
+    </div>
+
+    <div id="notification-container" class="notification-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "name": "ayurnutri",
+  "version": "1.0.0",
+  "description": "Comprehensive Ayurvedic Practice Management Platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "live-server --port=8080",
+    "build": "npm run minify",
+    "minify": "minify app.js -o app.min.js && minify style.css -o style.min.css",
+    "test": "jest",
+    "lint": "eslint app.js",
+    "format": "prettier --write *.js *.css *.html",
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/ayurnutri.git"
+  },
+  "keywords": [
+    "ayurveda",
+    "nutrition",
+    "healthcare",
+    "diet-planning", 
+    "dosha",
+    "wellness",
+    "traditional-medicine",
+    "practice-management",
+    "sih-2025",
+    "medtech"
+  ],
+  "author": "NutriVedaX Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-username/ayurnutri/issues"
+  },
+  "homepage": "https://your-username.github.io/ayurnutri/",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.8.0",
+    "jest": "^29.0.0",
+    "live-server": "^1.2.2",
+    "minify": "^9.0.0",
+    "gh-pages": "^5.0.0"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ]
+}
