@@ -2,6 +2,11 @@
 
 ![AyurNutri Banner](https://img.shields.io/badge/AyurNutri-Ayurvedic%20Wellness-023E20?style=for-the-badge&logo=leaf)
 
+## Live Preview
+
+[🔗 Click here to preview the website](https://JayParihar2110.github.io/NUTRIVEDAX---SIH/)
+
+
 > **Bridging 5000-year-old Ayurvedic wisdom with modern technology** 🌿
 
 AyurNutri is a comprehensive cloud-based platform that integrates traditional Ayurvedic principles with modern nutrition science, designed specifically for healthcare practitioners and patients seeking personalized wellness solutions.
